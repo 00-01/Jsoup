@@ -1,4 +1,3 @@
-/*
 package com.company;
 
 import org.jsoup.Jsoup;
@@ -13,12 +12,12 @@ import java.net.URL;
 import java.net.URLEncoder;
 
 public class Parser {
-    static void main(String[] args) {
+    public static void main(String[] args) {
         try {
             String key = URLEncoder.encode("딥러닝", "utf-8");
             String add = "http://search.hani.co.kr/Search?command=query&keyword=%EB%94%A5%EB%9F%AC%EB%8B%9D&media=news&submedia=&sort=d&period=all&datefrom=2000.01.01&dateto=2020.01.28&pageseq=0";
 
-            URL url = new URL(addr);
+            URL url = new URL(add);
 
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
             con.setConnectTimeout(30000);
@@ -54,4 +53,4 @@ public class Parser {
             e.printStackTrace();
         }
     }
-}*/
+}
